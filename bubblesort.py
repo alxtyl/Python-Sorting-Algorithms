@@ -1,21 +1,25 @@
 f = open('num.txt', 'r')
-fp = open('sorted.txt', 'w')
+fp = open('bubblesort.txt', 'w')
 
 numList = []
 
 for line in f:
     numList.append(int(line.strip('\n')))
 
-def bubblesort(numList):
+def bubbleSort(numList):
+	n = len(numList)
 
-# Swap the elements to arrange in order
-    for iter_num in range(len(list)-1,0,-1):
-        for idx in range(iter_num):
-            if list[idx]>list[idx+1]:
-                temp = list[idx]
-                list[idx] = list[idx+1]
-                list[idx+1] = temp
+	for i in range(n):
 
+		for j in range(0, n-i-1):
 
-bubblesort(numList)
-fp.write(str(numList) + "\n")
+			if numList[j] > numList[j+1]:
+				numList[j], numList[j+1] = numList[j+1], numList[j]
+
+bubbleSort(numList)
+
+numList = list(map(str, numList))
+fp.write("\n".join(numList))
+
+f.close()
+fp.close()
