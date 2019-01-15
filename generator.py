@@ -1,15 +1,15 @@
 from random import randrange
 
-irand = randrange(0, 1000001)
-
+# Opening file and declaring loop counter
 f = open('num.txt', 'w')
 x = 0
 
+# Generating nums
 while x < 1000:
     x += 1
-    irand = randrange(0, 1000)
+    irand = randrange(0, 1001)
     f.write(str(irand))
     f.write("\n")
-    if (x == 1000):
-        f.close()
-        break
+
+# Closing file object
+f.close()
