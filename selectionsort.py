@@ -19,7 +19,6 @@ def selection_sort(arr):
         # sorted end of the array
         arr[minimum], arr[i] = arr[i], arr[minimum]
 
-        
     return arr
 
 fp.write('\n'.join(map(str, selection_sort(arr))))
