@@ -22,3 +22,6 @@ def selection_sort(arr):
     return arr
 
 fp.write('\n'.join(map(str, selection_sort(arr))))
+
+f.close()
+fp.close()

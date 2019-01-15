@@ -50,3 +50,6 @@ def partition(alist,first,last):
 
 quickSort(alist)
 fp.write('\n'.join(map(str, alist)))
+
+f.close()
+fp.close()
