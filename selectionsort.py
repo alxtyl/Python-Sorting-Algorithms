@@ -6,7 +6,7 @@ arr = []
 for line in f:
     arr.append(int(line.strip()))
 
-def selection_sort(arr):
+def selectionSort(arr):
     for i in range(len(arr)):
         minimum = i
 
@@ -21,7 +21,7 @@ def selection_sort(arr):
 
     return arr
 
-fp.write('\n'.join(map(str, selection_sort(arr))))
+fp.write('\n'.join(map(str, selectionSort(arr))))
 
 f.close()
 fp.close()

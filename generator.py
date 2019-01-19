@@ -11,8 +11,3 @@ def generator():
         irand = randrange(0, 1001)
         f.write(str(irand))
         f.write("\n")
-
-generator()
-
-# Closing file object
-f.close()
