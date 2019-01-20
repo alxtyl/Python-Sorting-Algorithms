@@ -48,8 +48,5 @@ def partition(alist,first,last):
 
    return rightmark
 
-quickSort(alist)
-fp.write('\n'.join(map(str, alist)))
-
-f.close()
-fp.close()
+#quickSort(alist)
+#fp.write('\n'.join(map(str, alist)))

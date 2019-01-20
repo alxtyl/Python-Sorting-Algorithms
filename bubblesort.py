@@ -18,8 +18,5 @@ def bubbleSort(numList):
 
 bubbleSort(numList)
 
-numList = list(map(str, numList))
-fp.write("\n".join(numList))
-
-f.close()
-fp.close()
+#numList = list(map(str, numList))
+#fp.write("\n".join(numList))

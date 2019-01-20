@@ -1,54 +1,54 @@
-import datetime
+import time
+import timeit
 from generator import generator
 from bubblesort import bubbleSort
 from mergesort import merge_sort, merge
 from quicksort import quickSort
 from selectionsort import selectionSort
 
-f = open('num.txt', 'w')
-fp = open('num.txt', 'r')
-bubbleWrite = open('bubblesort.txt', 'a')
-mergeWrite = open('mergesort.txt', 'a')
-quicksortWrite = open('quicksort.txt', 'a')
-selectionsortWrite = open('selectionsort.txt', 'a')
+f = open('num.txt', 'r')
+bubbleWrite = open('bubblesort.txt', 'w')
+mergeWrite = open('mergesort.txt', 'w')
+quicksortWrite = open('quicksort.txt', 'w')
+selectionsortWrite = open('selectionsort.txt', 'w')
 
 generator()
 
-array = []
+unsorted_list = []
 
-for line in fp:
-    array.append(int(line.strip('\n')))
+for line in f:
+    unsorted_list.append(int(line.strip()))
 
-start = datetime.datetime.now()
-bubbleSort(array)
-end = datetime.datetime.now()
-elapsed = end - start
+start = time.process_time()
+bubbleSort(unsorted_list)
+end = time.process_time()
+elapsed = (end - start) * (10**6)
 print("Time for Bubblesort:")
-print(elapsed.seconds,":",(elapsed.microseconds)*1000)
+print("%.3f" % (elapsed))
 
-start = datetime.datetime.now()
-merge_sort(array)
-end = datetime.datetime.now()
-elapsed = end - start
+start = time.process_time()
+merge_sort(unsorted_list)
+end = time.process_time()
+elapsed = (end - start) * (10**6)
 print("Time for Mergesort:")
-print(elapsed.seconds,":",(elapsed.microseconds)*1000)
+print("%.3f" % (elapsed))
+mergeWrite.write('\n'.join(map(str, merge_sort(unsorted_list))))
 
-start = datetime.datetime.now()
-quickSort(array)
-end = datetime.datetime.now()
-elapsed = end - start
+start = time.process_time()
+quickSort(unsorted_list)
+end = time.process_time()
+elapsed = (end - start) * (10**6)
 print("Time for Quicksort:")
-print(elapsed.seconds,":",(elapsed.microseconds)*1000)
+print("%.3f" % (elapsed))
 
-start = datetime.datetime.now()
-selectionSort(array)
-end = datetime.datetime.now()
-elapsed = end - start
+start = time.process_time()
+selectionSort(unsorted_list)
+end = time.process_time()
+elapsed = (end - start) * (10**6)
 print("Time for Selectionsort:")
-print(elapsed.seconds,":",(elapsed.microseconds)*1000)
+print("%.3f" % (elapsed))
 
 f.close()
-fp.close()
 bubbleWrite.close()
 mergeWrite.close()
 quicksortWrite.close()

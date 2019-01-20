@@ -1,5 +1,5 @@
 f = open('num.txt', 'r')
-fp = open('mergesort.txt', 'w')
+mergeWrite = open('mergesort.txt', 'w')
 
 unsorted_list = []
 
@@ -36,7 +36,7 @@ def merge(left_half,right_half):
         res = res + left_half
     return res
 
-fp.write('\n'.join(map(str, merge_sort(unsorted_list))))
+mergeWrite.write('\n'.join(map(str, merge_sort(unsorted_list))))
 
-f.close()
-fp.close()
+#f.close()
+#mergeWrite.close()

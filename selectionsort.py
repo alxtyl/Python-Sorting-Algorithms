@@ -21,7 +21,4 @@ def selectionSort(arr):
 
     return arr
 
-fp.write('\n'.join(map(str, selectionSort(arr))))
-
-f.close()
-fp.close()
+#fp.write('\n'.join(map(str, selectionSort(arr))))
