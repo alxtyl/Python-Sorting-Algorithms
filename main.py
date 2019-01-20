@@ -46,3 +46,10 @@ end = datetime.datetime.now()
 elapsed = end - start
 print("Time for Selectionsort:")
 print(elapsed.seconds,":",(elapsed.microseconds)*1000)
+
+f.close()
+fp.close()
+bubbleWrite.close()
+mergeWrite.close()
+quicksortWrite.close()
+selectionsortWrite.close()
