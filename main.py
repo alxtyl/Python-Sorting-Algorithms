@@ -9,8 +9,8 @@ arr = []
 
 generator()
 
-for line in fp:
-   arr.append(int(line.strip()))
+# for line in fp:
+   # arr.append(int(line.strip()))
 
 start = time.process_time()
 bubbleSort(arr)
